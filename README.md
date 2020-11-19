@@ -1,8 +1,5 @@
 # Movies-ETL
-Module 8
-
-# Election_Analysis
-Written with Python
+Module 8 - Written with Python
 
 ## Overview of Project
 
