@@ -1,38 +1,31 @@
 # Movies-ETL
-Module 8 - Written with Python
+Module 8 - Written with Python mainly in jupyter notebooks
 
 ## Overview of Project
 
-The Colorado Board of Elections employee gave us the tast to complete an alection audit of recent local congressional election.
+Amazing Prime loves the dataset and wants to keep it updated on a daily basis. Britta needs your help to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. You’ll need to refactor the code from this module to create one function that takes in the three files—Wikipedia data, Kaggle metadata, and the MovieLens rating data—and performs the ETL process by adding the data to a PostgreSQL database.
 
 ### Purpose
-1.  Calculate the total number of votes cast.
-2.  Get a complete list of candidates who received votes.
-3.  Calculate the total number of votes each candidate received.
-4.  Calculate the percentage of votes each candidate won
-5.  Determine the winner of the election based on popular vote.
+1.  Write an ETL function to read three data files
+2.  Extract and Transform the Wikipedia Data
+3.  Extract and Transform the Kaggle Data
+4.  Create the Movie Database
 
 
 ## Resources
 
-* Python 3.7.6, Visual Studio Code 1.50.1
+* Python 3.7.6, Visual Studio Code 1.50.1, Jupyter Notebook
 
-* Data Source:  election_results.csv
+* Data Sources:
+  --ETL Deliverable 1 starter code (Links in Canvas.)
+  --ETL Deliverable 2 starter code (Links in Canvas.)
+  --ETL Deliverable 3 starter code (Links in Canvas.)
 
 ## Summary
-* There were 369,711 votes cast in the election.
-* The candidates were:  Charles Casper Stockham (Candidate 1), Diana DeGette (Candidate 2) and Raymon Anthony Doane (Candidate 3)
-* The winner of the election was Candidate 2:  Diana DeGette by winning 73.8% of the vote.
+* The three data files are passed into the function.  All three data sets where converted to DataFrames, and the DataFrames are correct and displayed.
+* TV shows are filtered out, and the wiki_movies DataFrame is created.  A try-except block was used successfully.  All of the tasks for the extraction & transformation of the Wikipedia data are completed.  The cleaned Wikipedia data is converted to a DataFrame, and the DataFrame is displayed properly.
+* During the extraction & transformation of the Kaggle metadata, the following are done:  The metadata is cleaned, the Wikipedia and Kaggle DataFrames are merged and the "movies" DataFrame is created and performed.  Three tasks completed during the extraction & transformation of the MovieLens rating data.  The Kaggle and ratings DataFrames are correct and displayed.
+* The data in the movies table in the SQL database was replaced.  The ratings table is dropped, and the MovieLens rating CSV file was added to the SQL ratings table.  The elapsed time to add the data to the database is displayed.
 
 ## Challenge Overview
-creating for loops with lists of dictionaries was difficult to grasp initially but with practice became crutial to developing code.
-
-## Election Audit
-
-Overview of Election Audit: Purpose of an election audit is to ensure the integrity of the calculated votes are accurate.  It also exames in detail the process used and double-checks its veracity.
-
-* Election-Audit Results: The audit matched the election results with 100% accuracy.
-
-![Election Results](https://github.com/basecipher/Election_Analysis/blob/main/Election%20Results.png)
-
-* Script can be repurposed for next election or modified for a different jurisdiction very easily.
+It was difficult in the sence this project was less linear.  Also, there was several points of code having a roadblocks if try-except handling exceptions weren't properly implemented.
